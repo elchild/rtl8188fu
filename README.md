@@ -1,7 +1,8 @@
-RTL8188FU driver for Linux kernel 4.15.x ~ 6.0.x (Linux Mint, Ubuntu or Debian Derivatives)
+RTL8188FU driver for Linux kernel 6.1+ (Arch Linux)
 
 info: rtl8188fu support will be add to rtl8xxxu module of Linux kernel. https://patchwork.kernel.org/project/linux-wireless/patch/b14f299d-3248-98fe-eee1-ba50d2e76c74@gmail.com/
 
+Note: At this point there is no such support on Arch linux yet, and it seems that it won't suppor AP mode, which makes it useless for many of us.
 
 ------------------
 
@@ -9,7 +10,7 @@ info: rtl8188fu support will be add to rtl8xxxu module of Linux kernel. https://
 
 `sudo apt-get install build-essential git dkms linux-headers-$(uname -r)`
 
-`git clone https://github.com/kelebek333/rtl8188fu`
+`git clone https://github.com/elchild/rtl8188fu`
 
 `sudo dkms install ./rtl8188fu`
 
@@ -55,29 +56,3 @@ If you are using kernel 5.15 and 5.16, you must create a configuration file with
 `sudo rm -f /lib/firmware/rtlwifi/rtl8188fufw.bin`
 
 `sudo rm -f /etc/modprobe.d/rtl8188fu.conf`
-
-
-------------------
-
-## How to install from PPA repository
-
-You can install rtl8188fu driver with following commands from PPA.
-
-for xUbuntu 16.04-18.04-20.04-21.10 / Linux Mint 18.x-19.x-20.x
-
-`sudo add-apt-repository ppa:kelebek333/kablosuz`
-
-`sudo apt-get update`
-
-`sudo apt install rtl8188fu-dkms`
-
-
-You can purge packages with following commands
-
-`sudo apt purge rtl8188fu-dkms`
-
-------------------
-
-## How to install (for ARM devices)
-
-https://github.com/kelebek333/rtl8188fu/tree/arm#how-to-install-for-arm-devices
